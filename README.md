@@ -1,5 +1,5 @@
 [![Swift Version](https://img.shields.io/badge/swift-5.0-orange)](https://swift.org/blog/swift-5-released/)
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](https://www.apple.com/ios/ios-14/)
 
 <p align="center">
     <img src="screenshot.png" alt="GIF walk-through" width="250">  
