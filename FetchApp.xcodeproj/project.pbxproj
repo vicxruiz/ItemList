@@ -22,6 +22,7 @@
 		98C964BF25623E92008C8D5A /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964BE25623E92008C8D5A /* FetchService.swift */; };
 		98C964C525623F7D008C8D5A /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964C425623F7D008C8D5A /* URLExtensions.swift */; };
 		98C964D125625F3A008C8D5A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964D025625F3A008C8D5A /* ItemTableViewCell.swift */; };
+		98C964D925627905008C8D5A /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C964D825627905008C8D5A /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		98C964BE25623E92008C8D5A /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		98C964C425623F7D008C8D5A /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		98C964D025625F3A008C8D5A /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		98C964D825627905008C8D5A /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		98C9645625620F29008C8D5A /* FetchApp */ = {
 			isa = PBXGroup;
 			children = (
+				98C964D825627905008C8D5A /* screenshot.png */,
 				98C964CF25625F0C008C8D5A /* Views */,
 				98C964B425623E3B008C8D5A /* Enums */,
 				98C964C325623F67008C8D5A /* Extensions */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C9646425620F2A008C8D5A /* LaunchScreen.storyboard in Resources */,
+				98C964D925627905008C8D5A /* screenshot.png in Resources */,
 				98C9646125620F2A008C8D5A /* Assets.xcassets in Resources */,
 				98C9645F25620F29008C8D5A /* Main.storyboard in Resources */,
 			);
