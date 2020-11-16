@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import os.log
 
 class ItemViewController: UIViewController {
 	
@@ -18,6 +19,7 @@ class ItemViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupViews()
+		fetchItems()
 	}
 }
 
@@ -40,7 +42,9 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	private func setupTableView() {
 		tableView.translatesAutoresizingMaskIntoConstraints = false
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: TextContent.ItemTableView.cellIdentifier)
+		tableView.register(ItemTableViewCell.self, forCellReuseIdentifier: TextContent.ItemTableView.cellIdentifier)
+		tableView.delegate = self
+		tableView.dataSource = self
 		
 		view.addSubview(tableView)
 		
@@ -53,11 +57,32 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return itemController.items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: TextContent.ItemTableView.cellIdentifier, for: indexPath)
+		let item = itemController.items[indexPath.row]
+		if let name = item.name {
+			cell.textLabel?.text = name
+		}
+		cell.detailTextLabel?.text = "ID: \(item.id)"
 		return cell
+	}
+}
+
+//MARK: - Fetch States
+
+extension ItemViewController {
+	func fetchItems() {
+		itemController.fetchItems { (error) in
+			DispatchQueue.main.async {
+				if error != nil {
+					os_log(.error, "Unable to fetch items")
+				} else {
+					self.tableView.reloadData()
+				}
+			}
+		}
 	}
 }

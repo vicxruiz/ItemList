@@ -21,6 +21,7 @@
 		98C964B625623E49008C8D5A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964B525623E49008C8D5A /* HTTPMethod.swift */; };
 		98C964BF25623E92008C8D5A /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964BE25623E92008C8D5A /* FetchService.swift */; };
 		98C964C525623F7D008C8D5A /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964C425623F7D008C8D5A /* URLExtensions.swift */; };
+		98C964D125625F3A008C8D5A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C964D025625F3A008C8D5A /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		98C964B525623E49008C8D5A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		98C964BE25623E92008C8D5A /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		98C964C425623F7D008C8D5A /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		98C964D025625F3A008C8D5A /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +113,14 @@
 		98C9645625620F29008C8D5A /* FetchApp */ = {
 			isa = PBXGroup;
 			children = (
-				98C964C325623F67008C8D5A /* Extensions */,
-				98C964BD25623E70008C8D5A /* Services */,
+				98C964CF25625F0C008C8D5A /* Views */,
 				98C964B425623E3B008C8D5A /* Enums */,
+				98C964C325623F67008C8D5A /* Extensions */,
 				98C964A6256215D2008C8D5A /* Model Controllers */,
 				98C9648C25620FD1008C8D5A /* Models */,
 				98C9648E25620FF7008C8D5A /* Navigation */,
 				98C9648A25620F3E008C8D5A /* Resources */,
+				98C964BD25623E70008C8D5A /* Services */,
 				98C9648F25621002008C8D5A /* Storyboards */,
 				98C9648B25620FB7008C8D5A /* View Controllers */,
 			);
@@ -216,6 +219,14 @@
 				98C964C425623F7D008C8D5A /* URLExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		98C964CF25625F0C008C8D5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98C964D025625F3A008C8D5A /* ItemTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			files = (
 				98C964BF25623E92008C8D5A /* FetchService.swift in Sources */,
 				98C964A22562155B008C8D5A /* TextContent.swift in Sources */,
+				98C964D125625F3A008C8D5A /* ItemTableViewCell.swift in Sources */,
 				98C9645825620F29008C8D5A /* AppDelegate.swift in Sources */,
 				98C964B625623E49008C8D5A /* HTTPMethod.swift in Sources */,
 				98C964C525623F7D008C8D5A /* URLExtensions.swift in Sources */,
