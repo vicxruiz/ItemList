@@ -1,4 +1,4 @@
-[![Swift Version][swift-image]][swift-url]
+<rect xmlns="http://www.w3.org/2000/svg" width="62" height="20" fill="url(#s)"/>
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
 <p align="center">
