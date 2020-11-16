@@ -95,6 +95,7 @@
 		98C9644B25620F29008C8D5A = {
 			isa = PBXGroup;
 			children = (
+				98C964D825627905008C8D5A /* screenshot.png */,
 				98C9645625620F29008C8D5A /* FetchApp */,
 				98C9646D25620F2B008C8D5A /* FetchAppTests */,
 				98C9647825620F2B008C8D5A /* FetchAppUITests */,
@@ -115,7 +116,6 @@
 		98C9645625620F29008C8D5A /* FetchApp */ = {
 			isa = PBXGroup;
 			children = (
-				98C964D825627905008C8D5A /* screenshot.png */,
 				98C964CF25625F0C008C8D5A /* Views */,
 				98C964B425623E3B008C8D5A /* Enums */,
 				98C964C325623F67008C8D5A /* Extensions */,
