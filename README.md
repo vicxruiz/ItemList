@@ -1,4 +1,4 @@
-<rect xmlns="http://www.w3.org/2000/svg" width="62" height="20" fill="url(#s)"/>
+[![Swift Version](https://img.shields.io/badge/swift-5.0-orange)](https://swift.org/blog/swift-5-released/)
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
 <p align="center">
