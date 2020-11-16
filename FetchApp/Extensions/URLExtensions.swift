@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension URL {
+	static var baseURL: URL {
+		return URL(string: TextContent.baseURL)!
+	}
+}

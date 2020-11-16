@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Item: Codable {
+	let id: Int
+	let listId: Int
+	let name: String?
+}

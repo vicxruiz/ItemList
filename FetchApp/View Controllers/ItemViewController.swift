@@ -13,6 +13,7 @@ class ItemViewController: UIViewController {
 	//MARK: - Properties
 	
 	let tableView = UITableView()
+	let itemController = ItemController(fetchService: FetchService())
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -39,6 +40,7 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	private func setupTableView() {
 		tableView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: TextContent.ItemTableView.cellIdentifier)
 		
 		view.addSubview(tableView)
 		
@@ -51,10 +53,11 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		<#code#>
+		return 1
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		<#code#>
+		let cell = tableView.dequeueReusableCell(withIdentifier: TextContent.ItemTableView.cellIdentifier, for: indexPath)
+		return cell
 	}
 }
