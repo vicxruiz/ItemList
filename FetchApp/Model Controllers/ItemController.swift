@@ -13,7 +13,15 @@ class ItemController {
 
 	let fetchService: FetchService
 	let baseURL = URL.baseURL
-	var items: [Item] = []
+	var items: [Item] = [] {
+		didSet {
+			filterUnnamedItems()
+			generateSections()
+		}
+	}
+	var filteredItems: [Item] = []
+	var sections: [[Item]] = [[]]
+	var sortedListStringIds: [String] = []
 	
 	init(fetchService: FetchService) {
 		self.fetchService = fetchService
@@ -48,6 +56,26 @@ extension ItemController {
 				print("error decoding data: \(error)")
 				completion(error)
 			}
+		}
+	}
+}
+
+//MARK: - Update Item data
+
+extension ItemController {
+	private func filterUnnamedItems() {
+		filteredItems = items.filter{ $0.name?.isEmpty == false }
+	}
+	
+	private func generateSections() {
+		let listIds = filteredItems.map { $0.listId }
+		let uniqueListIds = Array(Set(listIds))
+		let sortedListIds = uniqueListIds.sorted()
+		sortedListStringIds = sortedListIds.map { String($0) }
+		sections = sortedListIds.map{ listId in
+			return filteredItems
+				.filter { $0.listId == listId }
+				.sorted { $0.name! < $1.name! }
 		}
 	}
 }

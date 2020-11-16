@@ -57,12 +57,29 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return itemController.items.count
+		return itemController.sections[section].count
+	}
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return itemController.sections.count
+	}
+	
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		if itemController.sortedListStringIds.isEmpty {
+			return nil
+		} else {
+			return itemController.sortedListStringIds[section]
+		}
+	}
+	
+	func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+		print(itemController.sortedListStringIds)
+		return itemController.sortedListStringIds
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: TextContent.ItemTableView.cellIdentifier, for: indexPath)
-		let item = itemController.items[indexPath.row]
+		let item = itemController.sections[indexPath.section][indexPath.row]
 		if let name = item.name {
 			cell.textLabel?.text = name
 		}
@@ -71,7 +88,7 @@ extension ItemViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 }
 
-//MARK: - Fetch States
+//MARK: - Fetch data
 
 extension ItemViewController {
 	func fetchItems() {
